@@ -24,7 +24,10 @@ class SecondViewController: UIViewController {
         }
         
         // Generar los número de Fibonacci
-        
+        fibonacci = [0, 1]
+        for i in 2...fibonacciId {
+            fibonacci.append( fibonacci[ i-1 ] + fibonacci[ i-2 ] )
+        }
     }
 
 }
