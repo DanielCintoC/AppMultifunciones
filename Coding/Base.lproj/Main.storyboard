@@ -88,34 +88,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="87" y="312" width="201" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="Euz-8r-zWP">
+                                <rect key="frame" x="40" y="153" width="295" height="40"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="2" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Mql-Nr-CGh">
+                                        <rect key="frame" x="0.0" y="5.5" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="stepperPressed:" destination="8rJ-Kc-sve" eventType="valueChanged" id="wsh-ry-Y2j"/>
+                                        </connections>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6j-pZ-1oa">
+                                        <rect key="frame" x="148" y="3.5" width="147" height="33"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vzH-jE-J3P"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona cuantos número de Fibonacci quieres ver" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="JUL-f4-OuD">
+                                <rect key="frame" x="20" y="52" width="335" height="66"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gEB-Pv-RhZ">
+                                <rect key="frame" x="20" y="218" width="335" height="231"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="gEB-Pv-RhZ" secondAttribute="trailing" constant="20" id="6as-vo-30x"/>
+                            <constraint firstItem="JUL-f4-OuD" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="32" id="6bV-5M-sn7"/>
+                            <constraint firstItem="gEB-Pv-RhZ" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="9U5-Pt-YFB"/>
+                            <constraint firstItem="JUL-f4-OuD" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="FQR-jX-8Hc"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Euz-8r-zWP" secondAttribute="trailing" constant="40" id="L3U-6E-M7m"/>
+                            <constraint firstItem="gEB-Pv-RhZ" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="MHZ-dn-KP4"/>
+                            <constraint firstItem="JUL-f4-OuD" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="QoZ-vQ-GlS"/>
+                            <constraint firstItem="Euz-8r-zWP" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="UuK-ku-GjY"/>
+                            <constraint firstItem="gEB-Pv-RhZ" firstAttribute="top" secondItem="Euz-8r-zWP" secondAttribute="bottom" constant="25" id="aAu-eM-8bK"/>
+                            <constraint firstItem="Euz-8r-zWP" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="40" id="cei-xW-j15"/>
+                            <constraint firstItem="gEB-Pv-RhZ" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="eWt-WN-ueH"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="JUL-f4-OuD" secondAttribute="trailing" constant="20" id="tTB-IP-8BA"/>
+                            <constraint firstItem="Euz-8r-zWP" firstAttribute="top" secondItem="JUL-f4-OuD" secondAttribute="bottom" constant="35" id="wvg-WF-XIA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="labelNumber" destination="U6j-pZ-1oa" id="HB2-Nd-Hkm"/>
+                        <outlet property="stepper" destination="Mql-Nr-CGh" id="Keu-ul-jP4"/>
+                        <outlet property="textViewResult" destination="gEB-Pv-RhZ" id="GdJ-C1-1r7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864" y="67"/>
+            <point key="canvasLocation" x="863.20000000000005" y="66.11694152923539"/>
         </scene>
         <!--Third-->
         <scene sceneID="5W1-RQ-U1j">

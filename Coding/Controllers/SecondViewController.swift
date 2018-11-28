@@ -10,18 +10,34 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    @IBOutlet weak var labelNumber: UILabel!
+    @IBOutlet weak var textViewResult: UITextView!
+    @IBOutlet weak var stepper: UIStepper!
+    
     var fibonacci: [Int] = [0, 1]
     var fibonacciId = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        updateLabel(id: Int(self.stepper.value))
     }
 
+    
+    @IBAction func stepperPressed(_ sender: UIStepper) {
+        updateLabel(id: Int(sender.value))
+    }
+    
+    func updateLabel(id: Int) {
+        self.fibonacciId = id;
+        self.labelNumber.text = "\(fibonacciId)"
+        generateFibonacciNumbers()
+    }
+    
     func generateFibonacciNumbers() {
-        if (fibonacciId <= 1  || fibonacciId >= 100) {
+        /*if (fibonacciId <= 1  || fibonacciId >= 100) {
             return
-        }
+        }*/
         
         // Generar los número de Fibonacci
         fibonacci = [0, 1]
