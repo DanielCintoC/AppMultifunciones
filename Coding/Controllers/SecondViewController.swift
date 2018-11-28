@@ -44,6 +44,11 @@ class SecondViewController: UIViewController {
         for i in 2...fibonacciId {
             fibonacci.append( fibonacci[ i-1 ] + fibonacci[ i-2 ] )
         }
+        
+        let fibStr: [String] = fibonacci.compactMap({String($0)})
+        let result: String = fibStr.joined(separator: "\n")
+        self.textViewResult.text = result
+        
     }
 
 }
