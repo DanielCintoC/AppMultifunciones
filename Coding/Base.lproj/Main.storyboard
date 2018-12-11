@@ -232,7 +232,7 @@
             </objects>
             <point key="canvasLocation" x="864.79999999999995" y="838.83058470764627"/>
         </scene>
-        <!--Font Detail View Controller-->
+        <!--Detalle de la fuente-->
         <scene sceneID="4NM-8r-GrY">
             <objects>
                 <viewController id="uYl-3p-6MV" customClass="FontDetailViewController" customModule="Coding" customModuleProvider="target" sceneMemberID="viewController">
@@ -275,7 +275,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QPW-Nf-17y"/>
                     </view>
-                    <navigationItem key="navigationItem" id="i9Q-AJ-zu8"/>
+                    <navigationItem key="navigationItem" title="Detalle de la fuente" id="i9Q-AJ-zu8">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Glb-RT-cKa">
+                            <connections>
+                                <action selector="doneButtoPressed:" destination="uYl-3p-6MV" id="lqh-1J-7ga"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="labelTitle" destination="rYm-L6-ZXb" id="OoL-Rv-M7l"/>
                         <outlet property="pickerFonts" destination="3uS-uk-KCI" id="OtP-nc-zHT"/>

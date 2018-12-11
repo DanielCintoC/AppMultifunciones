@@ -20,4 +20,7 @@ class FontDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func doneButtoPressed(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true)
+    }
 }
